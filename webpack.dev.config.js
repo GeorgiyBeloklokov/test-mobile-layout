@@ -17,7 +17,7 @@ module.exports = {
         //contentBase: path.resolve(__dirname, 'dist'),
         static: 'dist',
         open: true,
-        compress: true,
+        //compress: true,
         hot: true,
         port: 8080
     },

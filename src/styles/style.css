@@ -1,6 +1,42 @@
+@import "./fonts.css";
 .main {
-    
-    height: 100vh;
-    width: 100vh;
-  background-color: #26963a;
+
+  min-height: 100vh;
+  min-width: 320px;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/images/4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../assets/images/4@2x.png");
+  }
+  @media (min-resolution: 3dppx) {
+    background-image: url("../assets/images/4@3x.png");
+  }
+}
+
+.header__buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 335px;
+  height: 24px;
+  left: calc(50% - 167px);
+  top: 40px;
+}
+
+.header__buttons-close {
+  width: 15.94px;
+  height: 15.94px;
+  background-image: url("../assets/images/Path.svg");
+  background-repeat: no-repeat;
+}
+
+.header__buttons-restore {
+  font-family: SFProText, sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: -0.216667px;
 }
