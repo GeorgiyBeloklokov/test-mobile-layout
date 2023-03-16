@@ -4,3 +4,10 @@
     font-weight: 400;
     font-style: normal;
   }
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src:  url('../assets/fonts/SF-Pro-Display-Bold.ttf') format('ttf');
+    font-weight: 600;
+    font-style: bold;
+  }
