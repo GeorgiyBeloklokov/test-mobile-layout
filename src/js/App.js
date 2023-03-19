@@ -30,6 +30,9 @@ export default class App {
 
     let main = document.querySelector("main");
 
+    let buttonRestore = document.querySelector(".header__buttons-restore");
+    buttonRestore.innerText = `${this.local["Restore"]}`;
+
     let sectionTitle = document.createElement("section");
 
     sectionTitle.classList.add("section__title");
@@ -51,7 +54,7 @@ export default class App {
             </g>
         </g>
     </g>
-</svg><span>${this.local["Unlimited documents"]}</span>`;
+</svg><span class="section__details-infinity_span" >${this.local["Unlimited documents"]}</span>`;
     sectionDetails.append(containerInfinity);
 
     let containerArrow = document.createElement("div");
@@ -66,7 +69,7 @@ export default class App {
             </g>
         </g>
     </g>
-</svg><span>${this.local["Count mode"]}</span>`;
+</svg><span class="section__details-infinity_span" >${this.local["Count mode"]}</span>`;
     sectionDetails.append(containerArrow);
 
     let containerOCR = document.createElement("div");
@@ -83,7 +86,8 @@ export default class App {
             </g>
         </g>
     </g>
-</svg><span>${this.local["Text recognition (OCR)"]}</span>`;
+</svg><span class="section__details-infinity_span">${this.local["Text recognition (OCR)"]}</span>`;
+
     sectionDetails.append(containerOCR);
     main.append(sectionDetails);
 
@@ -127,17 +131,8 @@ export default class App {
     containerLeftOffer.append(price);
 
     containerLeftOffer.addEventListener("click", () => {
-      containerLeftOffer.classList.add("inactive");
-      containerRightOffer.classList.remove("inactive");
-
-      /* this.createSettingItem(); */
-    });
-
-    containerLeftOffer.addEventListener("onload", () => {
-      containerLeftOffer.classList.add("inactive");
-      console.log("click =>>>>>");
-
-      /* this.createSettingItem(); */
+      containerLeftOffer.classList.remove("inactive");
+      containerRightOffer.classList.add("inactive");
     });
 
     sectionOffer.append(containerLeftOffer);
@@ -191,8 +186,12 @@ export default class App {
     containerRightOffer.append(redRoundedPrice);
 
     containerRightOffer.addEventListener("click", () => {
+      containerRightOffer.classList.remove("inactive");
+      containerLeftOffer.classList.add("inactive");
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
       containerRightOffer.classList.add("inactive");
-      containerLeftOffer.classList.remove("inactive");
     });
 
     sectionOffer.append(containerRightOffer);

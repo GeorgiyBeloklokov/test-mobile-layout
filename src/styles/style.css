@@ -1,7 +1,9 @@
 @import "./fonts.css";
 .main {
   min-height: 100vh;
-  min-width: 320px;
+  min-width: auto;
+  max-height: 900px;
+  max-width: 450px;
   background-image: url("../assets/images/4.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,18 +51,12 @@
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* .section__title {
-  width: 292px;
-  height: 86px;
-  margin-left: 46px;
-  margin-bottom: 32px;
-} */
+.section__title {
+  min-height: 127px;
+}
 .section__details {
-  width: 214.5px;
-  height: 91.45px;
-  margin-left: 91.5px;
-  margin-bottom: 48.55px;
-  /* background-color: #9a0808; */
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .section__details-infinity {
@@ -71,7 +67,7 @@
 .section__details-infinity svg {
   margin-right: 5px;
 }
-.section__details-infinity span {
+.section__details-infinity_span {
   font-family: SFProText, sans-serif;
   font-size: 17px;
   color: #ffffff;
@@ -85,7 +81,7 @@
   display: flex;
   width: 316px;
   height: 182px;
-  margin-left: 40px;
+  margin: 0 auto;
 }
 
 .section__offer-left {
@@ -131,12 +127,12 @@
   width: 151px;
   height: 21.98px;
   margin-left: -2px;
-  margin-bottom: -3px;
+  margin-bottom: 14px;
 }
 
 .section__offer-left_rectangle_title {
   font-family: SFProDisplay, sans-serif;
-  font-size: 15.4px;
+  font-size: 14.4px;
   line-height: 18px;
   text-align: center;
   color: #ffffff;
@@ -152,8 +148,6 @@
 }
 
 /***** Right part of offer ********/
-/*****                     ********/
-/*****                     ********/
 
 .section__offer-right {
   width: 151px;
@@ -177,10 +171,7 @@
   height: 38px;
   background-color: #db0000;
   border-radius: 19.2px;
-  margin: -172px 112px;
-  /*   position: absolute;
-  top: 29.5rem;
-  right: 2.9rem; */
+  margin: -178px 111px;
 }
 
 .section__offer-left_price_title {
@@ -211,8 +202,8 @@
 .section__footer {
   width: 324px;
   height: 42px;
+  margin: 0 auto;
   margin-top: 16px;
-  margin-left: 30px;
 }
 
 .section__button-title {
@@ -222,7 +213,7 @@
 }
 
 .section__footer-terms {
-  font-family: "Roboto";
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -234,7 +225,7 @@
 }
 
 .section__footer-link_left {
-  font-family: "Roboto";
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -244,7 +235,7 @@
   float: left;
 }
 .section__footer-link_right {
-  font-family: "Roboto";
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -254,29 +245,53 @@
   float: right;
 }
 
-/* .section__indicator {
-  width: 133px;
-  height: 34px;
-  margin-left: 121px;
-  margin-top: 22px;
-} */
 .section__indicator-item {
   width: 134px;
   height: 5px;
   background: #ffffff;
   border-radius: 100px;
-  margin-left: 124px;
+  margin: 0 auto;
   margin-top: 48px;
 }
 
-@media screen and (min-width: 375px) {
+.es {
+  margin-left: 62.5px;
+}
+
+.fr {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 380px) {
+  .main {
+    background-position-y: -3rem;
+  }
   .header__buttons {
-    padding-bottom: 8.7em;
+    padding-bottom: 6.6em;
   }
   .section__title-first {
-    font-size: 34px;
+    font-size: 24px;
+    margin-bottom: 6px;
+    line-height: 28px;
+  }
+  .section__offer {
+    margin-left: 34px;
+  }
+  .section__details {
+    margin-bottom: 0.7em;
+  }
+  .section__button {
+    margin-top: 8px;
+    transform: scale(0.88);
+  }
+  .section__indicator-item {
+    margin-top: 0.8em;
+  }
+  .section__title {
+    min-height: 64px;
   }
 }
+
 @media screen and (min-width: 390px) {
   .header__buttons {
     padding-bottom: 9.2em;
@@ -284,13 +299,84 @@
   .section__title-first {
     font-size: 35px;
   }
+  .section__details {
+    margin-bottom: 33.55px;
+  }
+  .section__footer div {
+    margin-bottom: 26px;
+  }
+  .section__indicator-item {
+    margin-top: 36px;
+  }
+  .section__title {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 414px) {
+  .main {
+    background-position-y: -3rem;
+  }
   .header__buttons {
-    padding-bottom: 10.1em;
+    padding-bottom: 7em;
   }
   .section__title-first {
-    font-size: 38px;
+    font-size: 26px;
+    margin-bottom: 7px;
+    line-height: 35px;
+  }
+  .section__details {
+    margin-bottom: 31px;
+  }
+  .section__button {
+    margin-left: 63px;
+  }
+  .section__footer {
+    margin-left: 43px;
+  }
+  .section__footer div {
+    margin-bottom: 16px;
+  }
+  .section__indicator-item {
+    margin-top: 21px;
+  }
+  .section__title {
+    min-height: 79px;
+  }
+}
+
+/************* Iphone X *************/
+
+@media screen and (min-height: 812px) and (max-height: 815px) {
+  .main {
+    background-position-y: 0;
+  }
+  .section__title-first {
+    font-size: 33px;
+    margin-bottom: 10px;
+    line-height: 36px;
+  }
+  .header__buttons {
+    padding-bottom: 8.8em;
+  }
+  .section__details {
+    margin-bottom: 24.55px;
+  }
+  .section__button {
+    margin-top: 16px;
+    transform: scale(1);
+  }
+  .section__indicator-item {
+    margin-top: 1.2em;
+  }
+  .section__footer div {
+    margin-bottom: 28px;
+  }
+  .section__indicator-item {
+    margin-left: 118px;
+    margin-top: 39px;
+  }
+  .section__title {
+    min-height: 119px;
   }
 }
