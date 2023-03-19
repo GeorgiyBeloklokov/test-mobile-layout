@@ -5,7 +5,8 @@ import ja from "../assets/locales/ja.json";
 import nl from "../assets/locales/nl.json";
 import ru from "../assets/locales/ru.json";
 import zh from "../assets/locales/zh.json";
-//import(filename).then(module => {})
+
+import mustache from "./helpers";
 export default class App {
   constructor() {
     this.local = null;
@@ -20,12 +21,17 @@ export default class App {
       ru,
       zh,
     };
+
+    ///Getting locale from query
     let queryString = window.location.search.slice(6);
 
+    ///Getting locale from user system
     let lang = navigator.language || navigator.userLanguage;
-    const defaultLanguage = en;
-    //this.local = languages[lang];
 
+    ///Assign default locale
+    const defaultLanguage = lang === languages[lang] ? languages[lang] : en;
+
+    ///Assign locale from query or default
     this.local = languages[queryString] ?? defaultLanguage;
 
     let main = document.querySelector("main");
@@ -33,11 +39,9 @@ export default class App {
     let buttonRestore = document.querySelector(".header__buttons-restore");
     buttonRestore.innerText = `${this.local["Restore"]}`;
 
-    let sectionTitle = document.createElement("section");
-
-    sectionTitle.classList.add("section__title");
+    let sectionTitle = document.querySelector(".section__title");
     sectionTitle.innerHTML = `<h1 class="section__title-first">${this.local["Unlimited Access<br>to All Features"]}</h1>`;
-    main.append(sectionTitle);
+
 
     let sectionDetails = document.createElement("section");
     sectionDetails.classList.add("section__details");
@@ -96,22 +100,16 @@ export default class App {
 
     let containerLeftOffer = document.createElement("div");
     containerLeftOffer.classList.add("section__offer-left");
-    let priceString = this.local["{{price}}/month"];
+
+    let priceToMustache = this.local["{{price}}/month"];
     let string = this.local["<strong>{{price}}</strong><br>per month"];
     let data = {
       price: "$9.99",
     };
-
-    const mustache = (string, data = {}) =>
-      Object.entries(data).reduce(
-        (res, [key, value]) =>
-          res.replace(new RegExp(`{{\\s*${key}\\s*}}`, "g"), value),
-        string
-      );
-    let newString = mustache(string, data);
+    let offerTitle = mustache(string, data);
 
     containerLeftOffer.innerHTML = `<h2 class="section__offer-left_title">${this.local["Monthly"]}
-    </h2><h2 class="section__offer-left_price">${newString}</h2>`;
+    </h2><h2 class="section__offer-left_price">${offerTitle}</h2>`;
 
     let rectangleFree = document.createElement("div");
     rectangleFree.classList.add("section__offer-rectangle");
@@ -124,9 +122,9 @@ export default class App {
     let price = document.createElement("div");
     price.classList.add("section__offer-price");
 
-    let priceIsMustached = mustache(priceString, data);
+    let offerPrice = mustache(priceToMustache, data);
 
-    price.innerHTML = `<h2 class="section__offer-left_price">${priceIsMustached}</h2>`;
+    price.innerHTML = `<h2 class="section__offer-left_price">${offerPrice}</h2>`;
 
     containerLeftOffer.append(price);
 
@@ -142,25 +140,19 @@ export default class App {
     let containerRightOffer = document.createElement("div");
     containerRightOffer.classList.add("section__offer-right");
 
-    let priceMonthString = this.local["{{price}}/month"];
-    let stringRight = this.local["<strong>{{price}}</strong><br>per year"];
-    let dataRight = {
+    let priceMonthToMustache = this.local["{{price}}/month"];
+    let titleRightToMustache =
+      this.local["<strong>{{price}}</strong><br>per year"];
+    let dataTitleRight = {
       price: "$19.99",
     };
-    let dataMonthRight = {
+    let dataMonthToMustache = {
       price: "$1.66",
     };
-
-    const mustached = (string, data = {}) =>
-      Object.entries(data).reduce(
-        (res, [key, value]) =>
-          res.replace(new RegExp(`{{\\s*${key}\\s*}}`, "g"), value),
-        string
-      );
-    let newStringRight = mustached(stringRight, dataRight);
+    let offerTitleRight = mustache(titleRightToMustache, dataTitleRight);
 
     containerRightOffer.innerHTML = `<h2 class="section__offer-left_title">${this.local["Annually"]}
-    </h2><h2 class="section__offer-left_price">${newStringRight}</h2>`;
+    </h2><h2 class="section__offer-left_price">${offerTitleRight}</h2>`;
 
     let rectangleFreeRight = document.createElement("div");
     rectangleFreeRight.classList.add("section__offer-rectangle");
@@ -173,9 +165,9 @@ export default class App {
     let priceRight = document.createElement("div");
     priceRight.classList.add("section__offer-price");
 
-    let priceMustached = mustached(priceMonthString, dataMonthRight);
+    let priceMonth = mustache(priceMonthToMustache, dataMonthToMustache);
 
-    priceRight.innerHTML = `<h2 class="section__offer-left_price">${priceMustached}</h2>`;
+    priceRight.innerHTML = `<h2 class="section__offer-left_price">${priceMonth}</h2>`;
 
     containerRightOffer.append(priceRight);
 

@@ -103,8 +103,8 @@
 .section__offer-left_price {
   font-family: SFProDisplay, sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 15.4px;
+  font-weight: 100;
+  font-size: 13.2px;
   line-height: 15px;
   text-align: center;
   color: #ffffff;
@@ -112,18 +112,14 @@
 }
 
 .section__offer-left_price strong {
-  font-family: SFProDisplay, sans-serif;
-  font-style: normal;
-  font-weight: 700;
+  
   font-size: 24px;
-  line-height: 15px;
-  text-align: center;
-  color: #ffffff;
+  font-weight: 500;
+
 }
 
 .section__offer-rectangle {
   background: #495795;
-
   width: 151px;
   height: 21.98px;
   margin-left: -2px;
@@ -132,19 +128,12 @@
 
 .section__offer-left_rectangle_title {
   font-family: SFProDisplay, sans-serif;
+  font-weight: 700;
   font-size: 14.4px;
   line-height: 18px;
   text-align: center;
   color: #ffffff;
   padding-top: 3px;
-}
-
-.section__offer-left_price {
-  font-family: SFProDisplay, sans-serif;
-  font-size: 13.2px;
-  line-height: 15px;
-  text-align: center;
-  color: #ffffff;
 }
 
 /***** Right part of offer ********/
