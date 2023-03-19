@@ -59,15 +59,13 @@
   margin: 0 auto;
 }
 
-.section__details-infinity {
-  display: flex;
-  align-items: center;
-}
-
-.section__details-infinity svg {
+.section__details svg {
   margin-right: 5px;
 }
-.section__details-infinity_span {
+
+.section__details-span_first,
+.section__details-span_second,
+.section__details-span_third {
   font-family: SFProText, sans-serif;
   font-size: 17px;
   color: #ffffff;
@@ -112,10 +110,8 @@
 }
 
 .section__offer-left_price strong {
-  
   font-size: 24px;
   font-weight: 500;
-
 }
 
 .section__offer-rectangle {
@@ -274,7 +270,7 @@
     transform: scale(0.88);
   }
   .section__indicator-item {
-    margin-top: 0.8em;
+    margin-top: 8px;
   }
   .section__title {
     min-height: 64px;
@@ -295,7 +291,7 @@
     margin-bottom: 26px;
   }
   .section__indicator-item {
-    margin-top: 36px;
+    margin-top: 31px;
   }
   .section__title {
     margin-bottom: 10px;
@@ -327,7 +323,7 @@
     margin-bottom: 16px;
   }
   .section__indicator-item {
-    margin-top: 21px;
+    margin-top: 16px;
   }
   .section__title {
     min-height: 79px;
@@ -363,7 +359,7 @@
   }
   .section__indicator-item {
     margin-left: 118px;
-    margin-top: 39px;
+    margin-top: 35px;
   }
   .section__title {
     min-height: 119px;
