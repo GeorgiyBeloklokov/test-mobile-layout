@@ -20,21 +20,21 @@
   }
 }
 
-.header__buttons {
+.header {
   display: flex;
   justify-content: space-between;
   padding: 40px 20px;
   padding-bottom: 9em;
 }
 
-.header__buttons-close {
+.header__button-close {
   width: 15.94px;
   height: 15.94px;
   background-image: url("../assets/images/Path.svg");
   background-repeat: no-repeat;
 }
 
-.header__buttons-restore {
+.header__button-restore {
   font-family: SFProText, sans-serif;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
@@ -42,7 +42,7 @@
   text-decoration: none;
 }
 
-.section__title-first {
+.title__title-first {
   font-family: SFProDisplay, sans-serif;
   font-size: 36px;
   line-height: 42.19px;
@@ -51,21 +51,21 @@
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.section__title {
+.title {
   min-height: 127px;
 }
-.section__details {
+.details {
   width: fit-content;
   margin: 0 auto;
 }
 
-.section__details svg {
+.details svg {
   margin-right: 5px;
 }
 
-.section__details-span_first,
-.section__details-span_second,
-.section__details-span_third {
+.details__span-first,
+.details__span-second,
+.details__span-third {
   font-family: SFProText, sans-serif;
   font-size: 17px;
   color: #ffffff;
@@ -75,21 +75,21 @@
   margin-left: 5px;
 }
 
-.section__offer {
+.offer {
   display: flex;
   width: 316px;
   height: 182px;
   margin: 0 auto;
 }
 
-.section__offer-left {
+.offer__offer-left {
   width: 151px;
   height: 181px;
   background-image: url(../assets/images/shape-1.svg);
   background-repeat: no-repeat;
 }
 
-.section__offer_title {
+.offer__offer_title {
   font-family: SFProDisplay, sans-serif;
   font-size: 18.7px;
   color: #ffffff;
@@ -98,7 +98,7 @@
   padding-top: 14.75px;
 }
 
-.section__offer-price {
+.offer__offer-price {
   font-family: SFProDisplay, sans-serif;
   font-style: normal;
   font-weight: 100;
@@ -109,12 +109,12 @@
   margin-bottom: 11.25px;
 }
 
-.section__offer-price strong {
+.offer__offer-price strong {
   font-size: 24px;
   font-weight: 500;
 }
 
-.section__offer-rectangle {
+.offers__offer-rectangle {
   background: #495795;
   width: 151px;
   height: 21.98px;
@@ -122,7 +122,7 @@
   margin-bottom: 14px;
 }
 
-.section__offer-rectangle_title {
+.offer__offer-rectangle-title {
   font-family: SFProDisplay, sans-serif;
   font-weight: 700;
   font-size: 14.4px;
@@ -151,7 +151,7 @@
   padding-top: 24.75px;
 }
 
-.section__offer-price_rounded {
+.offer__offer-price-rounded {
   width: 38px;
   height: 38px;
   background-color: #db0000;
@@ -159,7 +159,7 @@
   margin: -178px 111px;
 }
 
-.section__offer-price_title {
+.offer__offer-price-title {
   font-family: SFProDisplay, sans-serif;
   font-size: 12px;
   color: #ffffff;
@@ -173,7 +173,7 @@
   opacity: 0.5;
 }
 
-.section__button {
+.button {
   display: flex;
   justify-content: center;
   width: 280px;
@@ -184,20 +184,20 @@
   margin-left: 50px;
 }
 
-.section__footer {
+.footer {
   width: 324px;
   height: 42px;
   margin: 0 auto;
   margin-top: 16px;
 }
 
-.section__button-title {
+.button__title {
   font-family: SFProDisplay, sans-serif;
   font-size: 17px;
   color: #ffffff;
 }
 
-.section__footer-terms {
+.footer__footer-terms {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -209,7 +209,7 @@
   opacity: 0.5;
 }
 
-.section__footer-link_left {
+.footer__footer-link-left {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -219,7 +219,7 @@
   color: #bdc0d0;
   float: left;
 }
-.section__footer-link_right {
+.footer__footer-link-right {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -230,7 +230,7 @@
   float: right;
 }
 
-.section__indicator-item {
+.indicator__indicator-item {
   width: 134px;
   height: 5px;
   background: #ffffff;
@@ -251,49 +251,49 @@
   .main {
     background-position-y: -3rem;
   }
-  .header__buttons {
+  .header {
     padding-bottom: 6.6em;
   }
-  .section__title-first {
+  .title__title-first {
     font-size: 24px;
     margin-bottom: 6px;
     line-height: 28px;
   }
-  .section__offer {
+  .offer {
     margin-left: 34px;
   }
-  .section__details {
+  .details {
     margin-bottom: 0.7em;
   }
-  .section__button {
+  .button {
     margin-top: 8px;
     transform: scale(0.88);
   }
-  .section__indicator-item {
+  .indicator__indicator-item {
     margin-top: 8px;
   }
-  .section__title {
+  .title {
     min-height: 64px;
   }
 }
 
 @media screen and (min-width: 390px) {
-  .header__buttons {
+  .header {
     padding-bottom: 9.2em;
   }
-  .section__title-first {
+  .title__title-first {
     font-size: 35px;
   }
-  .section__details {
+  .details {
     margin-bottom: 33.55px;
   }
-  .section__footer div {
+  .footer div {
     margin-bottom: 26px;
   }
-  .section__indicator-item {
+  .indicator__indicator-item {
     margin-top: 31px;
   }
-  .section__title {
+  .title {
     margin-bottom: 10px;
   }
 }
@@ -302,30 +302,30 @@
   .main {
     background-position-y: -3rem;
   }
-  .header__buttons {
+  .header {
     padding-bottom: 7em;
   }
-  .section__title-first {
+  .title__title-first {
     font-size: 26px;
     margin-bottom: 7px;
     line-height: 35px;
   }
-  .section__details {
+  .details {
     margin-bottom: 31px;
   }
-  .section__button {
+  .button {
     margin-left: 63px;
   }
-  .section__footer {
+  .footer {
     margin-left: 43px;
   }
-  .section__footer div {
+  .footer div {
     margin-bottom: 16px;
   }
-  .section__indicator-item {
+  .indicator__indicator-item {
     margin-top: 16px;
   }
-  .section__title {
+  .title {
     min-height: 79px;
   }
 }
@@ -336,32 +336,32 @@
   .main {
     background-position-y: 0;
   }
-  .section__title-first {
+  .title__title-first {
     font-size: 33px;
     margin-bottom: 10px;
     line-height: 36px;
   }
-  .header__buttons {
+  .header {
     padding-bottom: 8.8em;
   }
-  .section__details {
+  .details {
     margin-bottom: 24.55px;
   }
-  .section__button {
+  .button {
     margin-top: 16px;
     transform: scale(1);
   }
-  .section__indicator-item {
+  .indicator__indicator-item {
     margin-top: 1.2em;
   }
-  .section__footer div {
+  .footer div {
     margin-bottom: 28px;
   }
-  .section__indicator-item {
+  .indicator__indicator-item {
     margin-left: 118px;
     margin-top: 35px;
   }
-  .section__title {
+  .title {
     min-height: 119px;
   }
 }

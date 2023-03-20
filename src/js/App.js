@@ -36,32 +36,32 @@ export default class App {
 
     let main = document.querySelector("main");
 
-    let buttonRestore = document.querySelector(".header__buttons-restore");
+    let buttonRestore = document.querySelector(".header__button-restore");
     buttonRestore.innerText = `${this.local["Restore"]}`;
 
-    let sectionTitle = document.querySelector(".section__title");
-    sectionTitle.innerHTML = `<h1 class="section__title-first">${this.local["Unlimited Access<br>to All Features"]}</h1>`;
+    let sectionTitle = document.querySelector(".title");
+    sectionTitle.innerHTML = `<h1 class="title__title-first">${this.local["Unlimited Access<br>to All Features"]}</h1>`;
 
     let detailSpanFirst = document.querySelector(
-      ".section__details-span_first"
+      ".details__span-first"
     );
     detailSpanFirst.innerText = `${this.local["Unlimited documents"]}`;
 
     let detailSpanSecond = document.querySelector(
-      ".section__details-span_second"
+      ".details__span-second"
     );
     detailSpanSecond.innerText = `${this.local["Count mode"]}`;
 
     let detailSpanThird = document.querySelector(
-      ".section__details-span_third"
+      ".details__span-third"
     );
     detailSpanThird.innerText = `${this.local["Text recognition (OCR)"]}`;
 
     let sectionOffer = document.createElement("section");
-    sectionOffer.classList.add("section__offer");
+    sectionOffer.classList.add("offer");
 
     let containerLeftOffer = document.createElement("div");
-    containerLeftOffer.classList.add("section__offer-left");
+    containerLeftOffer.classList.add("offer__offer-left");
 
     let priceToMustache = this.local["{{price}}/month"];
     let string = this.local["<strong>{{price}}</strong><br>per month"];
@@ -70,23 +70,23 @@ export default class App {
     };
     let offerTitle = mustache(string, data);
 
-    containerLeftOffer.innerHTML = `<h2 class="section__offer_title">${this.local["Monthly"]}
-    </h2><h2 class="section__offer-price">${offerTitle}</h2>`;
+    containerLeftOffer.innerHTML = `<h2 class="offer__offer_title">${this.local["Monthly"]}
+    </h2><h2 class="offer__offer-price">${offerTitle}</h2>`;
 
     let rectangleFree = document.createElement("div");
-    rectangleFree.classList.add("section__offer-rectangle");
+    rectangleFree.classList.add("offers__offer-rectangle");
 
-    rectangleFree.innerHTML = `<h2 class="section__offer-rectangle_title">${this.local["3 DAYS FREE"]}!
+    rectangleFree.innerHTML = `<h2 class="offer__offer-rectangle-title">${this.local["3 DAYS FREE"]}!
     </h2>`;
 
     containerLeftOffer.append(rectangleFree);
 
     let price = document.createElement("div");
-    price.classList.add("section__offer-price");
+    price.classList.add("offer__offer-price");
 
     let offerPrice = mustache(priceToMustache, data);
 
-    price.innerHTML = `<h2 class="section__offer-price">${offerPrice}</h2>`;
+    price.innerHTML = `<h2 class="offer__offer-price">${offerPrice}</h2>`;
 
     //containerLeftOffer.innerHTML = '<a href="#"><a/>'
 
@@ -115,29 +115,29 @@ export default class App {
     };
     let offerTitleRight = mustache(titleRightToMustache, dataTitleRight);
 
-    containerRightOffer.innerHTML = `<h2 class="section__offer_title">${this.local["Annually"]}
-    </h2><h2 class="section__offer-price">${offerTitleRight}</h2>`;
+    containerRightOffer.innerHTML = `<h2 class="offer__offer_title">${this.local["Annually"]}
+    </h2><h2 class="offer__offer-price">${offerTitleRight}</h2>`;
 
     let rectangleFreeRight = document.createElement("div");
-    rectangleFreeRight.classList.add("section__offer-rectangle");
+    rectangleFreeRight.classList.add("offers__offer-rectangle");
 
-    rectangleFreeRight.innerHTML = `<h2 class="section__offer-rectangle_title">${this.local["MOST POPULAR"]}
+    rectangleFreeRight.innerHTML = `<h2 class="offer__offer-rectangle-title">${this.local["MOST POPULAR"]}
     </h2>`;
 
     containerRightOffer.append(rectangleFreeRight);
 
     let priceRight = document.createElement("div");
-    priceRight.classList.add("section__offer-price");
+    priceRight.classList.add("offer__offer-price");
 
     let priceMonth = mustache(priceMonthToMustache, dataMonthToMustache);
 
-    priceRight.innerHTML = `<h2 class="section__offer-price">${priceMonth}</h2>`;
+    priceRight.innerHTML = `<h2 class="offer__offer-price">${priceMonth}</h2>`;
 
     containerRightOffer.append(priceRight);
 
     let redRoundedPrice = document.createElement("div");
-    redRoundedPrice.classList.add("section__offer-price_rounded");
-    redRoundedPrice.innerHTML = `<h2 class="section__offer-price_title">${this.local["-83%"]}</h2>`;
+    redRoundedPrice.classList.add("offer__offer-price-rounded");
+    redRoundedPrice.innerHTML = `<h2 class="offer__offer-price-title">${this.local["-83%"]}</h2>`;
 
     containerRightOffer.append(redRoundedPrice);
 
@@ -155,22 +155,22 @@ export default class App {
     main.append(sectionOffer);
 
     let button = document.createElement("section");
-    button.classList.add("section__button");
-    button.innerHTML = `<h3 class="section__button-title">${this.local["Continue"]}</h3>`;
+    button.classList.add("button");
+    button.innerHTML = `<h3 class="button__title">${this.local["Continue"]}</h3>`;
 
     main.append(button);
 
     let footer = document.createElement("section");
-    footer.classList.add("section__footer");
-    footer.innerHTML = `<div><p class="section__footer-terms">${this.local["Auto-renewable. Cancel anytime."]}</p></div>
-    <div><a class="section__footer-link_left" href="#">
-    ${this.local["Terms of Use"]}<a/><a class="section__footer-link_right" href="#">${this.local["Privacy Policy"]}<a/></div>`;
+    footer.classList.add("footer");
+    footer.innerHTML = `<div><p class="footer__footer-terms">${this.local["Auto-renewable. Cancel anytime."]}</p></div>
+    <div><a class="footer__footer-link-left" href="#">
+    ${this.local["Terms of Use"]}<a/><a class="footer__footer-link-right" href="#">${this.local["Privacy Policy"]}<a/></div>`;
 
     main.append(footer);
 
     let indicator = document.createElement("section");
-    indicator.classList.add("section__indicator");
-    indicator.innerHTML = `<div class="section__indicator-item"></div>`;
+    indicator.classList.add("indicator");
+    indicator.innerHTML = `<div class="indicator__indicator-item"></div>`;
 
     main.append(indicator);
 
