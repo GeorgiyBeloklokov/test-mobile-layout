@@ -94,7 +94,7 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            title: 'test-mob1',
+            title: 'Test-mob1',
             template: path.resolve(__dirname, './src/index.html'),
             filename: 'index.html',
         }),

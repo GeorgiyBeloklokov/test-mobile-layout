@@ -99,7 +99,7 @@ export default class App {
 
     sectionOffer.append(containerLeftOffer);
 
-    ///////////////////////////////////Right//////////////////////////////////////////////////
+    ///////////////////////////////////Right part of offers//////////////////////////////////////////////////
 
     let containerRightOffer = document.createElement("div");
     containerRightOffer.classList.add("section__offer-right");
