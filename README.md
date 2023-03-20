@@ -2,6 +2,8 @@
 
 Deploy:  https://georgiybeloklokov.github.io/test-mobile-layout/index.html
 
+The code there are in develop branch 
+
 For test iPhone SE, 8+, X, 14 only
 
 You can change language whit query ?lang=en
