@@ -70,13 +70,13 @@ export default class App {
     };
     let offerTitle = mustache(string, data);
 
-    containerLeftOffer.innerHTML = `<h2 class="section__offer-left_title">${this.local["Monthly"]}
-    </h2><h2 class="section__offer-left_price">${offerTitle}</h2>`;
+    containerLeftOffer.innerHTML = `<h2 class="section__offer_title">${this.local["Monthly"]}
+    </h2><h2 class="section__offer-price">${offerTitle}</h2>`;
 
     let rectangleFree = document.createElement("div");
     rectangleFree.classList.add("section__offer-rectangle");
 
-    rectangleFree.innerHTML = `<h2 class="section__offer-left_rectangle_title">${this.local["3 DAYS FREE"]}!
+    rectangleFree.innerHTML = `<h2 class="section__offer-rectangle_title">${this.local["3 DAYS FREE"]}!
     </h2>`;
 
     containerLeftOffer.append(rectangleFree);
@@ -86,7 +86,7 @@ export default class App {
 
     let offerPrice = mustache(priceToMustache, data);
 
-    price.innerHTML = `<h2 class="section__offer-left_price">${offerPrice}</h2>`;
+    price.innerHTML = `<h2 class="section__offer-price">${offerPrice}</h2>`;
 
     //containerLeftOffer.innerHTML = '<a href="#"><a/>'
 
@@ -115,13 +115,13 @@ export default class App {
     };
     let offerTitleRight = mustache(titleRightToMustache, dataTitleRight);
 
-    containerRightOffer.innerHTML = `<h2 class="section__offer-left_title">${this.local["Annually"]}
-    </h2><h2 class="section__offer-left_price">${offerTitleRight}</h2>`;
+    containerRightOffer.innerHTML = `<h2 class="section__offer_title">${this.local["Annually"]}
+    </h2><h2 class="section__offer-price">${offerTitleRight}</h2>`;
 
     let rectangleFreeRight = document.createElement("div");
     rectangleFreeRight.classList.add("section__offer-rectangle");
 
-    rectangleFreeRight.innerHTML = `<h2 class="section__offer-left_rectangle_title">${this.local["MOST POPULAR"]}
+    rectangleFreeRight.innerHTML = `<h2 class="section__offer-rectangle_title">${this.local["MOST POPULAR"]}
     </h2>`;
 
     containerRightOffer.append(rectangleFreeRight);
@@ -131,13 +131,13 @@ export default class App {
 
     let priceMonth = mustache(priceMonthToMustache, dataMonthToMustache);
 
-    priceRight.innerHTML = `<h2 class="section__offer-left_price">${priceMonth}</h2>`;
+    priceRight.innerHTML = `<h2 class="section__offer-price">${priceMonth}</h2>`;
 
     containerRightOffer.append(priceRight);
 
     let redRoundedPrice = document.createElement("div");
     redRoundedPrice.classList.add("section__offer-price_rounded");
-    redRoundedPrice.innerHTML = `<h2 class="section__offer-left_price_title">${this.local["-83%"]}</h2>`;
+    redRoundedPrice.innerHTML = `<h2 class="section__offer-price_title">${this.local["-83%"]}</h2>`;
 
     containerRightOffer.append(redRoundedPrice);
 
